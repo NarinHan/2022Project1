@@ -1,11 +1,13 @@
 package com.handong.word;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WordCRUD implements ICRUD {
     ArrayList<Word> list;
     Scanner s;
+    String fname = "Dictionary.txt";
 
     WordCRUD(Scanner s) {
         list = new ArrayList<>();
@@ -85,6 +87,43 @@ public class WordCRUD implements ICRUD {
             System.out.println("단어가 삭제되었습니다.");
         } else
             System.out.println("취소되었습니다.");
+    }
+
+    public void loadFile() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fname));
+            String line;
+            int cnt = 0;
+            while(true) {
+                line = br.readLine(); // 한 줄씩 읽어오기
+                if(line == null) break; // 반복 종료
+                // 읽은 데이터를 "|" 를 기준으로 난이도, 단어, 뜻으로 나눠서 각각 저장
+                String data[] = line.split("\\|");
+                int level = Integer.parseInt(data[0]);
+                String word = data[1];
+                String meaning = data[2];
+                list.add(new Word(0, level, word, meaning)); // 데이터 추가
+                cnt++; // 개수 세기
+            }
+            br.close();
+            System.out.println("=>" + cnt + "개 로딩 완료!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveFile() {
+        PrintWriter pr = null;
+        try {
+            pr = new PrintWriter(new FileWriter("test.txt"));
+            for(Word one : list) {
+                pr.write(one.toFileString() + "\n");
+            }
+            pr.close();
+            System.out.println("=> 데이터 저장 완료!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

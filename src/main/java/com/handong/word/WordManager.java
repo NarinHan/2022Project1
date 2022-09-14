@@ -28,20 +28,24 @@ public class WordManager {
     }
 
     public void start() {
+        wordCRUD.loadFile();
         while(true) {
             int menu = selectMenu();
             if(menu == 0) break;
-            else if(menu == 4) {
-                wordCRUD.addItem();
-            }
-            else if(menu == 1) {
+            else if(menu == 1) { // list
                 wordCRUD.listAll();
             }
-            else if(menu == 5) {
+            else if(menu == 4) { // add
+                wordCRUD.addItem();
+            }
+            else if(menu == 5) { // update
                 wordCRUD.updateItem();
             }
-            else if(menu == 6) {
+            else if(menu == 6) { // delete
                 wordCRUD.deleteItem();
+            }
+            else if(menu == 7) { // save data
+                wordCRUD.saveFile();
             }
         }
     }
