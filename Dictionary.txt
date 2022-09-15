@@ -7,7 +7,7 @@
 3|explicit|명백한
 2|isolate|고립시키다
 3|facilitate|쉽게 하다
-3|yield|산출하다
+3|yield|산출하다; 항복하다
 3|superintendent|관리자, 감독관
 1|stock|주식, 재고
 1|seagull|갈매기
@@ -16,4 +16,5 @@
 3|assert|주장하다; 확고히하다
 2|segment|부분; 나누다, 분할하다
 2|hamper|방해하다
-1|music|음악
+1|grasp|꽉 잡다, 움켜잡다
+1|broaden|넓어지다, 퍼지다
