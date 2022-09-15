@@ -1,0 +1,19 @@
+1|typhoon|태풍
+1|check|점검하다
+2|amorphous|확실한 형태가 없는, 무정형의
+1|mouldly|곰팡이가 핀
+1|absence|결석,결근,부재
+2|infuriate|극도로 화나게 만들다
+3|explicit|명백한
+2|isolate|고립시키다
+3|facilitate|쉽게 하다
+3|yield|산출하다
+3|superintendent|관리자, 감독관
+1|stock|주식, 재고
+1|seagull|갈매기
+2|glance|흘끗보다, 대강 훑어보다
+1|asuure|안심시키다, 확신시키다
+3|assert|주장하다; 확고히하다
+2|segment|부분; 나누다, 분할하다
+2|hamper|방해하다
+1|music|음악
