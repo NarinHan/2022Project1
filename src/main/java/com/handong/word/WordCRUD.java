@@ -66,7 +66,7 @@ public class WordCRUD implements ICRUD {
         for(int i = 0; i < list.size(); i++) {
             int exlevel = list.get(i).getLevel();
             if(exlevel != level) continue;
-            System.out.print((j+1) + " ");
+            System.out.print(String.format("%2d", (j+1)) + " ");
             System.out.println(list.get(i).toString());
             j++;
         }
